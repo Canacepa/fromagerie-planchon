@@ -1,0 +1,627 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Sulphur Point', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  margin: 0;
+  letter-spacing: 5px;
+}
+
+h2 {
+   font-family: 'Urbanist', sans-serif;
+   font-weight: 600;
+   font-size: 30px;
+   margin: 0;
+   letter-spacing: 5px;
+}
+
+h3 {
+   font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin: 0;
+  letter-spacing: 5px;
+}
+
+h4 {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 25px;
+   margin: 0;
+   letter-spacing: 2px;
+}
+
+h5 {
+  font-family: 'Sulphur Point', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  margin: 0;
+}
+
+p {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+ul {
+   text-decoration: none;
+   display: flex;
+   flex-direction: column;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 600;
+   font-size: 20px;
+  margin: 0;
+  letter-spacing: 2px;
+  max-width: 620px;
+     margin-right: auto;
+     margin-left: auto;
+     text-align: center;
+}
+li {
+   text-decoration: none;
+   display: flex;
+   flex-direction: column;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+  margin: 0;
+  letter-spacing: 2px;
+  max-width: 620px;
+     margin-right: auto;
+     margin-left: auto;
+     text-align: center;
+}
+
+a:any-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  margin: 0;
+  text-decoration : none;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+  color: inherit;
+  outline: inherit;
+}
+
+/* HOMEPAGE */
+
+.parallax {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-position: center;
+  
+  h1 {
+     width: 100%;
+     padding: 0 25px;
+     text-align: center;
+     position: absolute;
+     top: 75%;
+     transform: translateY(-50%);
+     text-transform: uppercase;
+     font-family: 'Sulphur Point', sans-serif;
+     font-weight: 700;
+     color: #fefefe;
+     font-size: 75px;
+     margin: 0;
+     letter-spacing: 5px;
+     text-shadow: #222;
+  }
+  
+   &:nth-of-type(1) {
+     background: url(../images/Cheese\ Party\ Mealk\ 20190914-4269\ 077.jpg);
+     background-size: cover;
+     background-position: center;
+   }
+  
+  &:nth-of-type(2) {
+     background: url(../images/IMG_8507.jpeg);
+     background-size: cover;
+     background-position: center;
+   }
+
+  &:nth-of-type(3) {
+     background: url(../images/IMG_5858-2.jpg);
+     background-size: cover;
+   }
+
+  &:nth-of-type(4) {
+     background: url(../images/2307031515160.jpg);
+     background-size: cover;
+   } 
+}
+
+.container {
+   margin: 0;
+   padding: 50px 0 50px 0;
+  
+  p, h1, h2, h3, h4, h5 {
+     max-width: 700px;
+     margin-right: auto;
+     margin-left: auto;
+     text-align: center;
+     padding: 30px 10px 10px 10px;
+  }
+
+  a:any-link {
+     display:flex;
+     height: 30px;
+     max-width: 95%;
+     margin-right: 50px;
+     align-items: center;
+     justify-content: end;
+
+     svg {
+        margin-left: 10px;
+     }
+  }
+}
+
+.produits {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0;
+   padding: 50px 0 50px 0;
+}
+
+.produit-card {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(4, 1fr);
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
+   width: 400px;
+   height: 400px;
+   background-color: rgb(53, 51, 51);
+   transition: all 0.3s ease;
+   position: relative;
+}
+
+.photo-produit { grid-area: 1 / 1 / 5 / 4; 
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: 1;
+}
+.nom-produit { grid-area: 1 / 1 / 3 / 4; 
+   visibility: hidden;
+   color: white;
+   z-index: 3;
+}
+.lait-produit { grid-area: 1 / 3 / 2 / 4; 
+   width: 40%;
+   height: 40%;
+   top: 0;
+   right: 0;
+   justify-content: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   visibility: hidden;
+   z-index: 3;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+}
+.description-produit { grid-area: 3 / 1 / 5 / 4;
+   padding: 10px;
+   font-family: 'Urbanist', sans-serif;
+   font-weight: 500;
+   font-size: 15px;
+   color: white;
+   text-align: center;
+   visibility: hidden;
+   z-index: 3;
+}
+.info-background { grid-area: 1 / 1 / 5 / 4; 
+   background-color: #B48B60;
+   opacity: 50%;
+   transition: all 0.3s ease;
+   visibility: hidden;
+   z-index: 2;
+}
+
+.produit-card:hover { 
+   .nom-produit { 
+      visibility: visible;
+   }
+   .lait-produit { 
+      visibility: visible;
+   }
+   .description-produit { 
+      visibility: visible;
+   }
+   .info-background { 
+      visibility: visible;
+   }
+}
+
+.Vache{background-image: url(../images/tete-Vache.png);}
+.Brebis{background-image: url(../images/tete-brebis.png);}
+.Chèvre{background-image: url(../images/tete-Chevre.png);}
+.Buffelone{background-image: url(../images/tete-Buffelonne.png);}
+
+.link-insta {
+   display: flex;
+   justify-content: center;
+   margin-right: auto;
+   margin-left: auto;
+   text-align: center;
+}
+
+.link-insta a {
+   color: #B48B60;
+   text-decoration: none;
+   text-align: center;
+   width: 250px;
+   justify-items: center;
+   padding: 5px 10px;
+}
+
+.newsletter {
+   display: flex;
+   flex-direction: column;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0;
+   padding: 10px 0 50px 0;
+}
+
+.email {
+   font-family: 'Urbanist', sans-serif;
+   width: 700px;
+   border-bottom: 1px solid #222;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+}
+
+.validation {
+   width: 700px;
+   display: flex;
+   justify-content: space-between
+}
+
+.cgu {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 10px;
+  margin: 0;
+}
+
+
+/* NAVBAR */
+
+.header {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background: none;
+   z-index: 1000;
+   transition: all 0.3s ease;
+}
+
+.navbar {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
+}
+
+.logo{
+   background-image: url(../images/logo-planchon-FSsD.png);
+   width: 500px;
+   max-width: 500px;
+   height: 150px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.logo-navbar {
+   width: 100%;
+   height: 100%;
+}
+
+.nav-links {
+   display: flex;
+   justify-content: center;
+   font-family: 'Urbanist', sans-serif;
+   text-align: center;
+   font-weight: 900;
+   font-size: 15px;
+   margin-top: 10px;
+}
+
+.nav-links a {
+   color: white;
+   text-decoration: none;
+   text-align: center;
+   width: 300px;
+   justify-items: center;
+   padding: 5px 10px;
+}
+
+.nav-links a:hover {
+   color: burlywood ;
+}
+
+.scrolled.navbar {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: 5px 20px;
+   background-color: #fefefe;
+}
+
+.scrolled .nav-links a {
+   color: burlywood ;
+}
+
+.scrolled .nav-links a:hover {
+   color: white ;
+}
+.scrolled .logo  {
+   background-image: url(../images/logoSeul-planchon-FSsD.png);
+   max-width: 80px;
+   max-height: 80px;
+   -webkit-filter: none;
+  filter: none;
+}
+
+.scrolled .nav-links {
+   margin-top: 0;
+}
+
+
+/* FOOTER */
+
+.footer {
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #3D3D3D;
+   color: white;
+   padding: 5px;
+}
+
+.logo-footer {
+   background-image: url(../images/logoSeul-planchon-FSsD.png);
+   width: 100px;
+   height: 100px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   padding: 10px;
+}
+
+.nav-links-footer {
+   display: flex;
+   justify-content: space-around;
+   font-family: 'Urbanist', sans-serif;
+   text-align: center;
+   font-weight: 500;
+   font-size: 15px;
+   margin-top: 10px;
+}
+
+.nav-links-footer a {
+   color: white;
+   text-decoration: none;
+   text-align: center;
+   width: 300px;
+   justify-items: center;
+   padding: 5px 10px;
+   font-size: 12px;
+}
+
+.copy-social {
+   width: 80%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 5px;
+   color: #B48B60;
+   font-family: 'Urbanist', sans-serif;
+   font-weight: 600;
+   font-size: 12px;
+   border-top: #fefefe 1px solid;
+}
+
+.social-icon {
+   filter: invert(62%) sepia(8%) saturate(2019%) hue-rotate(350deg) brightness(91%) contrast(87%);
+}
+
+/* MAISON PLANCHON */
+
+.maison {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0;
+}
+
+.maison span {
+   padding-bottom: 10px;
+}
+
+/* NOS OFFRES ET PRESTATIONS */
+
+.head-offre {
+   background-image: url(../images/IMG_8891.jpeg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.offres {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0;
+}
+
+.offres span {
+   padding-bottom: 10px;
+}
+
+.partenaires {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0;
+}
+
+.partenaire {
+   font-weight: 600;
+   padding-top: 10px;
+}
+
+/* LES PROFFESIONNELS */
+
+/* NOS BOUTIQUES */
+
+.boutiques {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0;
+   padding: 50px 0 50px 0;
+}
+
+/* NOS PARTENAIRES */
+
+.logo-partenaires {
+   width: 100%;
+   height: 50vh;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.link-part {
+   width: 250px;
+   height: 250px;
+   object-fit: contain;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.img-part {
+   width: 200px;
+   height: 200px;
+   object-fit: contain;
+}
+
+.spartiate {
+   background-image: url(../images/Spartiates.png);
+   background-size: cover;
+   background-position: center;
+   width: 300px;
+   height: 300px;
+}
+.goth {
+   background-image: url(../images/les\ Gothiques.png);
+   background-size: cover;
+   background-position: center;
+   width: 300px;
+   height: 300px;
+}
+.rca {
+   background-image: url(../images/RCA.png);
+   background-size: cover;
+   background-position: center;
+   width: 300px;
+   height: 300px;
+}
+
+
+
+/* ADMIN */
+
+/* Modal container */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ 
+ /* Modal content box */
+ .modal-content {
+   background-color: #fefefe;
+   margin: 15% auto; /* 15% from the top and centered */
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%; /* Could be more or less, depending on screen size */
+ }
+ 
+ /* Close button */
+ .close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+ }
+ 
+ table {
+   width: 100%;
+   
+ }
+
+ th {
+   font-family: 'Urbanist', sans-serif;
+   font-weight: 600;
+   font-size: 30px;
+   margin: 0;
+   letter-spacing: 5px;
+ }
+ 
+ td {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+   margin: 0;
+   letter-spacing: 2px;
+ }

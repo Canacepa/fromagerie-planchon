@@ -102,7 +102,7 @@ button {
 /* HOMEPAGE */
 
 .parallax {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   background-position: center;
@@ -292,7 +292,7 @@ button {
 .header {
    position: fixed;
    top: 0;
-   width: 100%;
+   width: 100vw;
    background: none;
    z-index: 1000;
    transition: all 0.3s ease;
@@ -308,9 +308,10 @@ button {
 
 .logo{
    background-image: url(../images/logo-planchon-FSsD.png);
-   width: 500px;
+   width: 40vw;
    max-width: 500px;
-   height: 150px;
+   height: 20vh;
+   max-height: 150px;
    background-size: contain;
    background-repeat: no-repeat;
    -webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -324,6 +325,7 @@ button {
 
 .nav-links {
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
    font-family: 'Urbanist', sans-serif;
    text-align: center;

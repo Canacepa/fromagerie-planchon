@@ -13,8 +13,9 @@
     <tbody>
       {{#each produits}}
         <tr>
-          <td><img src="{{imgurl}}" alt="{{name}}" />
-          <form action="/produits/{{id}}/edit-photo">
+          <td>
+         <img src="{{imgUrl}}" alt="{{name}}" />
+          <form method="post" action="/produits/{{id}}/edit-photo">
             <label for="photo-{{id}}">Photo</label>
             <input type="file" id="photo-{{id}}" name="photo" /><br />
             <button type="submit">Valider</button>
@@ -56,7 +57,6 @@
               <label for="photo-{{id}}">Photo</label>
               <button type="submit">Valider</button>
             </form>
-            <a href="/admin/delete/{{id}}">Delete</a>
           </td>
         </tr>
       {{/each}}

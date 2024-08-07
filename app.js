@@ -31,7 +31,7 @@ const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
 const produitRoutes = require("./routes/produit.routes");
-app.use("/produit", produitRoutes);
+app.use("/produits", produitRoutes);
 
 // To handle partials
 hbs.registerPartials(__dirname + "/views/partials/");

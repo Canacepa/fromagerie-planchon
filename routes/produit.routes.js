@@ -38,34 +38,17 @@ router.post("/:id/edit", (req, res) => {
 });
 
 // POST /produits/:id/edit-photo
-router.post(
-  "/:id/edit-photo",
-  fileUploader.single("photo"),
-  (req, res, next) => {
-    Produit.findByIdAndUpdate(
-      req.params.id,
-      { imgUrl: req.file.path },
-      { new: true }
-    )
-      .then(() => {
-        res.redirect(`/admin`);
-      })
-      .catch((err) => {
-        console.log(err);
-        next(err);
-      });
-  }
-);
-
-// POST /produits/:id/delete
-router.post("/:id/delete", (req, res) => {
-  Produit.findByIdAndDelete(req.params.id)
-    .then(() => {
-      res.redirect("/admin");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+router.post('/:Id/edit-photo', fileUploader.single('photo'), (req, res, next) => {
+  console.log(req.file)
+  console.log(req.params)
+	Produit.findByIdAndUpdate(req.params, { ingUrl: req.file.path }, { new: true })
+		.then(() => {
+			res.redirect(`/admin`);
+		})
+		.catch((err) => {
+			console.log(err);
+			next(err);
+		});
 });
 
 module.exports = router;

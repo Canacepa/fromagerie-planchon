@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  /* width: 100vw; */
 }
 
 h1 {
@@ -64,6 +65,7 @@ ul {
      margin-left: auto;
      text-align: center;
 }
+
 li {
    text-decoration: none;
    display: flex;
@@ -128,8 +130,16 @@ button {
    margin: 0;
    padding: 50px 0 50px 0;
   
-  p, h1, h2, h3, h4, h5 {
+  p, h2, h3, h4, h5 {
      max-width: 700px;
+     margin-right: auto;
+     margin-left: auto;
+     text-align: center;
+     padding: 30px 10px 10px 10px;
+  };
+
+  h1 {
+     max-width: 800px;
      margin-right: auto;
      margin-left: auto;
      text-align: center;
@@ -140,9 +150,10 @@ button {
      display:flex;
      height: 30px;
      max-width: 95%;
-     margin-right: 50px;
      align-items: center;
      justify-content: end;
+     text-decoration: none;
+     color: black;
 
      svg {
         margin-left: 10px;
@@ -286,6 +297,36 @@ button {
   margin: 0;
 }
 
+.resaux {
+   max-width: 100%;
+   margin-right: auto;
+   margin-left: auto;
+   text-align: center;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0;
+   padding: 10px 0 50px 0;
+
+   .resaux-links {
+      display: flex;
+      width: 50%;
+      max-width: 700px;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0;
+      padding: 10px 0 50px 0;
+   }
+
+   a {
+      text-decoration: none;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      justify-items: center;
+      margin: 0;
+   }
+}
 
 /* NAVBAR */
 
@@ -446,6 +487,17 @@ button {
    padding-bottom: 10px;
 }
 
+.legende {
+   width: 100%;
+   position: absolute;
+   text-align:right;
+   font-weight: 400;
+   font-size: 15px;
+   color: white;
+   text-shadow: 1px 1px 1px #222;
+}
+
+
 /* NOS OFFRES ET PRESTATIONS */
 
 .offres {
@@ -471,6 +523,10 @@ button {
 .partenaire {
    font-weight: 600;
    padding-top: 10px;
+}
+
+.asterix {
+   font-size: 10px;
 }
 
 /* LES PROFFESIONNELS */
@@ -525,24 +581,43 @@ button {
 
 .spartiate {
    background-image: url(../images/Spartiates.png);
-   background-size: cover;
+   background-size: contain;
    background-position: center;
-   width: 300px;
-   height: 300px;
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 150px;
 }
 .goth {
    background-image: url(../images/les\ Gothiques.png);
-   background-size: cover;
+   background-size: contain;
    background-position: center;
-   width: 300px;
-   height: 300px;
+   background-repeat: no-repeat;
+   width: 100px;
+   height: 150px;
 }
 .rca {
    background-image: url(../images/RCA.png);
-   background-size: cover;
+   background-size: contain;
    background-position: center;
-   width: 300px;
-   height: 300px;
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 250px;
+}
+.handball {
+   background-image: url(../images/logo-amiens-picardie-handball.png);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 200px;
+}
+.judo {
+   background-image: url(../images/judo.png);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 200px;
 }
 
 
@@ -628,31 +703,82 @@ button {
  }
 
 .home4 {
-   background: url(../images/2307031515160.jpg);
+   background: url(../images/IMG_4110.jpg);
    background-size: cover;
  } 
 
 .head-maison {
-   background-image: url(../images/IMG_3122.jpg);
+   background-image: url(../images/IMG_8662.jpeg);
    background-size: cover;
    background-repeat: no-repeat;
 }
 
- .head-offre {
+.maison2 {
+   background-image: url(../images/C3777DBB-388E-4BEC-A13A-C805EA6E97C9.JPG);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.maison3 {
+   background-image: url(../images/IMG_9679.jpeg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.maison4 {
+   background-image: url(../images/IMG_7509.jpeg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.logo-mealk {
+   background-image: url(../images/IMG_7509.jpeg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.head-offre {
    background-image: url(../images/P1012528.JPG);
    background-size: cover;
    background-repeat: no-repeat;
 }
+
+.offre2 {
+   background-image: url(../images/P1010874.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.offre3 {
+   background-image: url(../images/P1010958\ \(1\).jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.offre4 {
+   background-image: url(../images/IMG_9686.jpeg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.offre5 {
+   background-image: url(../images/Beurre-Mealk-102020-3303.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.offre6 {
+   background-image: url(../images/DSC_8837.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
 
 .head-pro {
    background-image: url(../images/P1010615.jpg);
    background-size: cover;
    background-repeat: no-repeat;
 }
-
-/* .head-pro h1 {
-   color: #B48B60;
-} */
 
 .head-boutique {
    background-image: url(../images/2307031515160.jpg);

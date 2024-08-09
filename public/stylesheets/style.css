@@ -123,6 +123,9 @@ button {
      margin: 0;
      letter-spacing: 5px;
      text-shadow: #222;
+     @media (max-width: 900px) {
+        font-size: 45px;
+    }
   }
 }
 
@@ -370,7 +373,6 @@ button {
    justify-content: center;
    font-family: 'Urbanist', sans-serif;
    text-align: center;
-   font-weight: 900;
    font-size: 15px;
    margin-top: 10px;
 }
@@ -379,7 +381,8 @@ button {
    color: white;
    text-decoration: none;
    text-align: center;
-   width: 300px;
+   width: 240px;
+   font-weight: 500;
    justify-items: center;
    padding: 5px 10px;
 }
@@ -425,6 +428,9 @@ button {
    background-color: #3D3D3D;
    color: white;
    padding: 5px;
+   @media (max-width: 900px) {
+      height: 300px;
+  }
 }
 
 .logo-footer {
@@ -438,11 +444,12 @@ button {
 
 .nav-links-footer {
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-around;
    font-family: 'Urbanist', sans-serif;
    text-align: center;
    font-weight: 500;
-   font-size: 15px;
+   font-size: 13px;
    margin-top: 10px;
 }
 
@@ -489,6 +496,7 @@ button {
 
 .legende {
    width: 100%;
+   max-width: 800px;
    position: absolute;
    text-align:right;
    font-weight: 400;
@@ -510,6 +518,10 @@ button {
 
 .offres span {
    padding-bottom: 10px;
+}
+
+.partenaires-list {
+   padding: 0;
 }
 
 .partenaires {
@@ -700,77 +712,92 @@ button {
 .home3 {
    background: url(../images/IMG_5858-2.jpg);
    background-size: cover;
+   background-position: center;
  }
 
 .home4 {
    background: url(../images/IMG_4110.jpg);
    background-size: cover;
+   background-position: center;
  } 
 
 .head-maison {
    background-image: url(../images/IMG_8662.jpeg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .maison2 {
    background-image: url(../images/C3777DBB-388E-4BEC-A13A-C805EA6E97C9.JPG);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .maison3 {
    background-image: url(../images/IMG_9679.jpeg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .maison4 {
    background-image: url(../images/IMG_7509.jpeg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .logo-mealk {
-   background-image: url();
-   background-size: cover;
+   background-image: url(../images/Mealk.png);
+   background-size: contain;
+   background-position: center;
    background-repeat: no-repeat;
+   max-width: 700px;
+   height: 300px;
 }
 
 .head-offre {
    background-image: url(../images/P1012528.JPG);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .offre2 {
    background-image: url(../images/P1010874.jpg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .offre3 {
    background-image: url(../images/P1010958\ \(1\).jpg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .offre4 {
    background-image: url(../images/IMG_9686.jpeg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .offre5 {
    background-image: url(../images/Beurre-Mealk-102020-3303.jpg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .offre6 {
    background-image: url(../images/DSC_8837.jpg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 
@@ -778,16 +805,19 @@ button {
    background-image: url(../images/P1010615.jpg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .head-boutique {
    background-image: url(../images/2307031515160.jpg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }
 
 .head-part {
    background-image: url(../images/Cheese\ Party\ Mealk\ 20190914-4269\ 077.jpg);
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
 }

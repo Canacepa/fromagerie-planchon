@@ -495,10 +495,11 @@ button {
 }
 
 .legende {
-   width: 100%;
    max-width: 800px;
-   position: absolute;
-   text-align:right;
+   margin: 0;
+   padding: 10px;
+   max-width: 800px;
+   text-align:left;
    font-weight: 400;
    font-size: 15px;
    color: white;

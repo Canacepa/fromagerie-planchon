@@ -181,7 +181,7 @@ button {
    grid-row-gap: 0px;
    width: 400px;
    height: 400px;
-   background-color: rgb(53, 51, 51);
+   padding-bottom: 10px;
    transition: all 0.3s ease;
    position: relative;
 }
@@ -381,10 +381,11 @@ button {
    color: white;
    text-decoration: none;
    text-align: center;
-   width: 240px;
+   width: auto;
+   max-width: 240px;
+   padding: 5px 30px;
    font-weight: 500;
    justify-items: center;
-   padding: 5px 10px;
 }
 
 .nav-links a:hover {
@@ -416,6 +417,77 @@ button {
    margin-top: 0;
 }
 
+.hamburger {
+   display: none;
+   font-size: 28px;
+   cursor: pointer;
+ }
+ 
+
+ @media (max-width: 900px) {
+   .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px;
+   }
+
+   .logo{
+      background-image: url(../images/logo-planchon-FSsD.png);
+      width: 40vw;
+      max-width: 250px;
+      height: 20vh;
+      max-height: 200px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+     filter: drop-shadow(5px 5px 5px #222);
+   }
+
+   .nav-links {
+     display: none;
+     flex-direction: column;
+     gap: 10px;
+     position: absolute;
+     top: 50px;
+     right: 20px;
+     width: 250px;
+     padding: 10px;
+     border-radius: 5px;
+     background-color: antiquewhite;
+   }
+
+   .nav-links a {
+      color: #B48B60;
+   }
+
+   .scrolled.navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px;
+      background-color: #fefefe;
+   }
+ 
+   .hamburger {
+     display: block;
+     color: #B48B60;
+     filter: drop-shadow(5px 5px 5px #222);
+   }
+
+   .scrolled.hamburger {
+      color: #B48B60;
+      filter: none;
+   }
+ 
+   .nav-links.active {
+     display: flex;
+   }
+ }
+ 
+
 
 /* FOOTER */
 
@@ -442,6 +514,10 @@ button {
    padding: 10px;
 }
 
+.nav-footer {
+   width: 80%;
+}
+
 .nav-links-footer {
    display: flex;
    flex-wrap: wrap;
@@ -457,7 +533,9 @@ button {
    color: white;
    text-decoration: none;
    text-align: center;
-   width: 300px;
+   width: auto;
+   max-width: 240px;
+   padding: 5px 30px;
    justify-items: center;
    padding: 5px 10px;
    font-size: 12px;
@@ -542,7 +620,7 @@ button {
    font-size: 10px;
 }
 
-/* LES PROFFESIONNELS */
+/* LES PROFFESSIONNELS */
 
 .professionnels {
    display: flex;
@@ -720,10 +798,11 @@ button {
    background: url(../images/IMG_4110.jpg);
    background-size: cover;
    background-position: center;
+   filter: grayscale(100%);
  } 
 
 .head-maison {
-   background-image: url(../images/IMG_8662.jpeg);
+   background-image: url(../images/P1012429.JPG);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
@@ -803,14 +882,14 @@ button {
 
 
 .head-pro {
-   background-image: url(../images/P1010615.jpg);
+   background-image: url(../images/6.png);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
 }
 
 .head-boutique {
-   background-image: url(../images/2307031515160.jpg);
+   background-image: url(../images/P1012485.JPG);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;

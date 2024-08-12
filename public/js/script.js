@@ -30,6 +30,15 @@ window.addEventListener('scroll', function() {
    }
 });
 
+// Navbar burger menu
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 // Modal
 
 document.addEventListener('DOMContentLoaded', (event) => {

@@ -1,62 +1,60 @@
 <div>
   <h1>Produits "selection du mois</h1>
-  <table>
+  <table class="produits-admin">
     <thead>
       <tr>
-        <th>Photo</th>
-        <th>Name</th>
-        <th>Lait</th>
-        <th>desciption</th>
-        <th>Actions</th>
+        <th class="th-td-photo">Photo</th>
+        <th class="th-td-name">Name</th>
+        <th class="th-td-lait">Lait</th>
+        <th class="th-td-desc">desciption</th>
+        <th class="th-td-action"></th>
       </tr>
     </thead>
     <tbody>
       {{#each produits}}
         <tr>
-          <td>
-         <img src="{{imgUrl}}" alt="{{name}}" />
-          <form method="post" action="/produits/{{id}}/edit-photo">
-            <label for="photo-{{id}}">Photo</label>
-            <input type="file" id="photo-{{id}}" name="photo" /><br />
-            <button type="submit">Valider</button>
-          </form>
-          </td>
-          <td>{{name}}</td>
-          <td>{{lait}}</td>
-          <td>{{desciption}}</td>
-          <td>
-            <button id="edit-{{id}}">Edit</button>
-            <form
-              id="modal{{id}}"
-              class="modal"
-              action="/produit/{{id}}/edit"
-              method="post"
-            >
-              <label for="name-{{id}}">Nom</label>
-              <input
-                type="text"
-                id="name-{{id}}"
-                name="name"
-                placeholder="{{name}}"
-                value="{{name}}"
-              /><br />
-              <label for="lait">Lait</label>
-              <select id="lait" name="lait">
-                <option value="Vache">Vache</option>
-                <option value="Brebis">Brebis</option>
-                <option value="Chèvre">Chèvre</option>
-                <option value="Buffelone">Buffelone</option>
-                <option value="Autre">Autre</option>
-              </select>
-              <label for="description-{{id}}">Description</label>
-              <textarea
-                id="description-{{id}}"
-                name="description"
-                placeholder="{{description}}"
-              >{{description}}</textarea><br />
+          <td class="th-td-photo">
+            <img class="img-admin" src="{{imgUrl}}" alt="{{name}}" />
+            <form method="post" action="/produits/{{id}}/edit-photo">
               <label for="photo-{{id}}">Photo</label>
+              <input type="file" id="photo-{{id}}" name="photo" /><br />
               <button type="submit">Valider</button>
             </form>
+          </td>
+          <td class="th-td-name">{{name}}</td>
+          <td class="th-td-lait">{{lait}}</td>
+          <td class="th-td-desc">{{description}}</td>
+          <td class="th-td-action">
+            <button class="btn-admin" id="edit-{{id}}">Edit</button>
+            <div id="modal{{id}}" class="modal">
+              <form action="/produit/{{id}}/edit" method="post">
+                <button class="close" id="close-{{id}}">X</button>
+                <label for="name-{{id}}">Nom</label>
+                <input
+                  type="text"
+                  id="name-{{id}}"
+                  name="name"
+                  placeholder="{{name}}"
+                  value="{{name}}"
+                /><br />
+                <label for="lait">Lait</label>
+                <select id="lait" name="lait">
+                  <option value="Vache">Vache</option>
+                  <option value="Brebis">Brebis</option>
+                  <option value="Chèvre">Chèvre</option>
+                  <option value="Buffelone">Buffelone</option>
+                  <option value="Autre">Autre</option>
+                </select>
+                <label for="description-{{id}}">Description</label>
+                <textarea
+                  id="description-{{id}}"
+                  name="description"
+                  placeholder="{{description}}"
+                >{{description}}</textarea><br />
+                <label for="photo-{{id}}">Photo</label>
+                <button type="submit">Valider</button>
+              </form>
+            </div>
           </td>
         </tr>
       {{/each}}

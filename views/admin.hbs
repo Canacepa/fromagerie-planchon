@@ -1,5 +1,7 @@
 <div>
-  <h1>Produits "selection du mois</h1>
+
+
+  <h1>Produits "selection du mois"</h1>
   <table class="produits-admin">
     <thead>
       <tr>
@@ -16,7 +18,6 @@
           <td class="th-td-photo">
             <img class="img-admin" src="{{imgUrl}}" alt="{{name}}" />
             <form method="post" action="/produits/{{id}}/edit-photo">
-              <label for="photo-{{id}}">Photo</label>
               <input type="file" id="photo-{{id}}" name="photo" /><br />
               <button type="submit">Valider</button>
             </form>
@@ -25,36 +26,7 @@
           <td class="th-td-lait">{{lait}}</td>
           <td class="th-td-desc">{{description}}</td>
           <td class="th-td-action">
-            <button class="btn-admin" id="edit-{{id}}">Edit</button>
-            <div id="modal{{id}}" class="modal">
-              <form action="/produit/{{id}}/edit" method="post">
-                <button class="close" id="close-{{id}}">X</button>
-                <label for="name-{{id}}">Nom</label>
-                <input
-                  type="text"
-                  id="name-{{id}}"
-                  name="name"
-                  placeholder="{{name}}"
-                  value="{{name}}"
-                /><br />
-                <label for="lait">Lait</label>
-                <select id="lait" name="lait">
-                  <option value="Vache">Vache</option>
-                  <option value="Brebis">Brebis</option>
-                  <option value="Chèvre">Chèvre</option>
-                  <option value="Buffelone">Buffelone</option>
-                  <option value="Autre">Autre</option>
-                </select>
-                <label for="description-{{id}}">Description</label>
-                <textarea
-                  id="description-{{id}}"
-                  name="description"
-                  placeholder="{{description}}"
-                >{{description}}</textarea><br />
-                <label for="photo-{{id}}">Photo</label>
-                <button type="submit">Valider</button>
-              </form>
-            </div>
+            <a class="btn-admin" href="/produits/{{id}}/edit">Modifier textes</a>
           </td>
         </tr>
       {{/each}}

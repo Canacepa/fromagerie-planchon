@@ -98,15 +98,16 @@ a:any-link {
 
 button {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 10px;
-  margin: 0;
   border: none;
-  background: none;
+  background-color: #B48B60;
+  color: white;
+  padding: 5px;
+  text-align: center;
   text-decoration: none;
-  color: inherit;
-  outline: inherit;
-}
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+} 
 
 /* HOMEPAGE */
 
@@ -740,7 +741,6 @@ button {
    justify-content: space-around;
    align-items: center;
    margin: 0;
-   padding: 50px 0 50px 0;
 }
 
 table, th, td {
@@ -751,7 +751,7 @@ table, th, td {
 th {
    font-family: 'Urbanist', sans-serif;
    font-weight: 600;
-   font-size: 30px;
+   font-size: 25px;
    margin: 0;
    letter-spacing: 5px;
  }
@@ -795,12 +795,10 @@ th {
 .btn-admin {
    background-color: #B48B60;
    color: white;
-   padding: 10px 20px;
+   padding: 5px;
    text-align: center;
    text-decoration: none;
-   display: inline-block;
    font-size: 16px;
-   margin: 4px 2px;
    cursor: pointer;
    border-radius: 5px;
 }
@@ -842,6 +840,107 @@ th {
    text-decoration: none;
    cursor: pointer;
  }
+
+/* EDIT PRODUIT */
+
+.edit {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+
+   h2 {
+      width: 50%;
+      text-align: center;
+      padding: 10px;
+   }
+}
+form {
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+   font-family: 'Urbanist', sans-serif;
+}
+
+.input-admin {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   color: black;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   font-family: 'Urbanist', sans-serif;
+ }
+
+.input-admin-textarea {
+   width: 100%;
+   height: 200px;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   font-family: 'Urbanist', sans-serif;
+ }
+ 
+ input[type=submit] {
+   width: 100%;
+   background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+
+/* LOGIN */
+
+.login-form {   
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+
+   h2 {
+      width: 50%;
+      text-align: center;
+      padding: 10px;
+   }
+}
+
+.input-login {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   color: black;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   font-family: 'Urbanist', sans-serif;
+ }
+
+ .error {
+   color: red;
+   font-family: 'Urbanist', sans-serif;
+   font-weight: 600;
+   font-size: 15px;
+   margin: 0;
+   padding: 10px;
+}
 
  /* PHOTOS  */
 

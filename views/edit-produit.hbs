@@ -1,0 +1,39 @@
+<div class="edit">
+    {{#if produit}}
+
+  <h2>Modifier le produit</h2>
+  <form action="/produits/{{produit.id}}/edit" method="post">
+    <label for="name-{{produit.id}}">Nom 
+        <span></span>
+    </label>
+    
+    <input
+        class="input-admin"
+      type="text"
+      id="name-{{produit.id}}"
+      name="name"
+      placeholder="{{produit.name}}"
+      value="{{produit.name}}"
+    /><br />
+    <label for="lait">Lait</label>
+    <select class="input-admin" id="lait" name="lait" placeholder="{{produit.lait}}">
+      <option value="Vache">Vache</option>
+      <option value="Brebis">Brebis</option>
+      <option value="Chèvre">Chèvre</option>
+      <option value="Buffelone">Buffelone</option>
+      <option value="Autre">Autre</option>
+    </select>
+    <label for="description-{{produit.id}}">Description</label>
+    <textarea
+        class="input-admin-textarea"
+      id="description-{{produit.id}}"
+      name="description"
+      placeholder="{{produit.description}}"
+    >{{produit.description}}</textarea><br />
+    <div>
+      <a class="btn-admin" href="/admin">Annuler</a>
+      <button type="submit">Valider</button>
+    </div>
+  </form>
+  {{/if}}
+</div>

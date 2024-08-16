@@ -25,10 +25,22 @@ router.post("/", (req, res) => {
   });
 });
 
+// GET /produits/:id/edit
+router.get("/:id/edit", (req, res) => {
+  Produit.findById(req.params.id)
+    .then((produit) => {
+      res.render("edit-produit", { produit });
+      console.log(produit);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
 // POST /produits/:id/edit
 router.post("/:id/edit", (req, res) => {
   const { name, description, lait } = req.body;
-  Produit.findByIdAndUpdate(req.params.id, { name, price, description, lait })
+  Produit.findByIdAndUpdate(req.params.id, { name, description, lait })
     .then(() => {
       res.redirect("/admin");
     })

@@ -19,7 +19,6 @@ router.get("/", (req, res, next) => {
 router.get("/admin", isLoggedIn, (req, res) => {
   Produit.find()
     .then((produits) => {
-      console.log(produits);
       res.render("admin", { produits });
     })
     .catch((error) => {

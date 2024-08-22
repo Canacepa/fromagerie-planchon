@@ -99,7 +99,7 @@ a:any-link {
 button {
   font-family: 'Montserrat', sans-serif;
   border: none;
-  background-color: #B48B60;
+  background-color: #C79557 ;
   color: white;
   padding: 5px;
   text-align: center;
@@ -183,9 +183,9 @@ button {
      }
 
        &:hover {
-         color: #B48B60;
+         color: #C79557 ;
          svg {
-            fill: #B48B60;
+            fill: #C79557 ;
          }
        }
   }
@@ -224,9 +224,10 @@ button {
    z-index: 1;
 }
 
-.nom-produit { grid-area: 1 / 1 / 3 / 4; 
+.nom-produit { grid-area: 1 / 1 / 2 / 4; 
    visibility: hidden;
    color: white;
+   width: 75%;
    z-index: 3;
 }
 
@@ -245,7 +246,7 @@ button {
    right: 5px;
 }
 
-.description-produit { grid-area: 3 / 1 / 5 / 4;
+.description-produit { grid-area: 2 / 1 / 5 / 4;
    padding: 10px;
    font-family: 'Urbanist', sans-serif;
    font-weight: 500;
@@ -257,7 +258,7 @@ button {
 }
 
 .info-background { grid-area: 1 / 1 / 5 / 4; 
-   background-color: #B48B60;
+   background-color: #C79557 ;
    opacity: 50%;
    transition: all 0.3s ease;
    visibility: hidden;
@@ -293,7 +294,7 @@ button {
 }
 
 .link-insta a {
-   color: #B48B60;
+   color: #C79557 ;
    text-decoration: none;
    text-align: center;
    width: 250px;
@@ -493,7 +494,7 @@ button {
    }
 
    .nav-links a {
-      color: #B48B60;
+      color: #C79557 ;
    }
 
    .scrolled.navbar {
@@ -507,12 +508,12 @@ button {
  
    .hamburger {
      display: block;
-     color: #B48B60;
+     color: #C79557 ;
      filter: drop-shadow(5px 5px 5px #222);
    }
 
    .scrolled.hamburger {
-      color: #B48B60;
+      color: #C79557 ;
       filter: none;
    }
  
@@ -581,7 +582,7 @@ button {
    justify-content: space-between;
    align-items: center;
    padding-top: 5px;
-   color: #B48B60;
+   color: #C79557 ;
    font-family: 'Urbanist', sans-serif;
    font-weight: 600;
    font-size: 12px;
@@ -744,7 +745,6 @@ button {
 }
 
 table, th, td {
-   border: 1px solid black;
    text-align: center;
 }
 
@@ -766,7 +766,7 @@ th {
 
 
 .th-td-photo {
-   width: 25%;
+   width: 20%;
 }
 
 .th-td-nom {
@@ -778,7 +778,7 @@ th {
 }
 
 .th-td-desc {
-   width: 40%;
+   width: 45%;
 }
 
 .th-td-action {
@@ -787,13 +787,22 @@ th {
 
 
 .img-admin {
-   width: 200px;
-   height: 200px;
+   width: 250px;
+   height: 250px;
    object-fit: cover;
 }
 
+.btn-container {
+   height: 150px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 5px;
+   margin: 0;
+}
+
 .btn-admin {
-   background-color: #B48B60;
+   background-color: #C79557 ;
    color: white;
    padding: 5px;
    text-align: center;

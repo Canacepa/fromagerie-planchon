@@ -1,0 +1,14 @@
+<div class="edit">
+  {{#if produit}}
+
+    <h2>Modifier la photo produit</h2>
+    <img class="img-admin" src="{{produit.imgUrl}}" alt="{{produit.name}}" />
+    <form action="/produits/{{produit.id}}/edit-photo" method="post" enctype='multipart/form-data'>
+      <input type='file' name='photo' class='input' />
+      <div>
+        <a class="btn-admin" href="/admin">Annuler</a>
+        <button type="submit">Valider</button>
+      </div>
+    </form>
+  {{/if}}
+</div>

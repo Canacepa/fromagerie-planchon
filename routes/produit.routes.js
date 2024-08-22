@@ -30,7 +30,17 @@ router.get("/:id/edit", (req, res) => {
   Produit.findById(req.params.id)
     .then((produit) => {
       res.render("edit-produit", { produit });
-      console.log(produit);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+// GET /produits/:id/edit-photo
+router.get("/:id/edit-photo", (req, res) => {
+  Produit.findById(req.params.id)
+    .then((produit) => {
+      res.render("edit-photo", { produit });
     })
     .catch((error) => {
       console.log(error);
@@ -51,9 +61,9 @@ router.post("/:id/edit", (req, res) => {
 
 // POST /produits/:id/edit-photo
 router.post('/:Id/edit-photo', fileUploader.single('photo'), (req, res, next) => {
-  console.log(req.file)
-  console.log(req.params)
-	Produit.findByIdAndUpdate(req.params, { ingUrl: req.file.path }, { new: true })
+  console.log(req.file);
+  console.log(req.file.path);
+	Produit.findByIdAndUpdate(req.params.Id, { imgUrl: req.file.path }, { new: true })
 		.then(() => {
 			res.redirect(`/admin`);
 		})

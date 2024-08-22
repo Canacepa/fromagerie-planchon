@@ -1,6 +1,5 @@
 <div>
 
-
   <h1>Produits "selection du mois"</h1>
   <table class="produits-admin">
     <thead>
@@ -17,16 +16,15 @@
         <tr>
           <td class="th-td-photo">
             <img class="img-admin" src="{{imgUrl}}" alt="{{name}}" />
-            <form method="post" action="/produits/{{id}}/edit-photo">
-              <input type="file" id="photo-{{id}}" name="photo" /><br />
-              <button type="submit">Valider</button>
-            </form>
           </td>
           <td class="th-td-name">{{name}}</td>
           <td class="th-td-lait">{{lait}}</td>
           <td class="th-td-desc">{{description}}</td>
           <td class="th-td-action">
-            <a class="btn-admin" href="/produits/{{id}}/edit">Modifier textes</a>
+            <div class="btn-container">
+              <a class="btn-admin" href="/produits/{{id}}/edit">Modifier textes</a>
+              <a class="btn-admin" href="/produits/{{id}}/edit-photo">Modifier photo</a>
+            </div>
           </td>
         </tr>
       {{/each}}

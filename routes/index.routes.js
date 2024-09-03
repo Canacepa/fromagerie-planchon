@@ -51,4 +51,14 @@ router.get("/partenaires", (req, res) => {
   res.render("partenaires");
 });
 
+/* GET mention page */
+router.get("/mentions", (req, res) => { 
+  res.render("mentions");
+});
+
+/* GET QR Code page */
+router.get("/qrcode", (req, res) => { 
+  res.render("qr-code");
+});
+
 module.exports = router;
